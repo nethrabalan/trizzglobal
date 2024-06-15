@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trizz Global</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffebcd;
+      padding: 10px 20px;
+      position: sticky;
+    
+    }
+
+    header .logo {
+      flex: 1;
+    }
+
+    header nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: sticky;
+    }
+
+    header .login-button {
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+      gap: 20px;
+      position: sticky;
+    }
+
+    header nav ul {
+      list-style-type: none;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+      font-size: 20px;
+      position: sticky;
+    }
+
+
+
+    .logo img {
+      height: 70px;
+      transition: height ease 0.5s, ease 0.5s;
+    }
+
+    .logo img:hover {
+      height: 100px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+      font-size: 20px;
+      float: right;
+    }
+
+    nav a {
+    
+ 
+  width:90%;
+  font-size: 25px;
+  font-family: Verdana;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms cubic-bezier(1, 1, 1, 1);
+  text-align: center;
+  padding:10px ;
+  margin-right: 20px;
+     text-decoration: none;
+      color: #4b8b3b;
+      font-weight: 200;
+      position: relative;
+    }
+
+    nav a::after,nav a::before {
+      content: "";
+  position: absolute;
+  display: block;
+  border: 0px solid transparent;
+  width: 0%;
+  height: 0%;
+  transition: all 0.5s ease;
+  border-spacing: 29px 29px;
+    }
+
+    nav a::after {
+      width: 0%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-spacing: 29px 29px;
+    }
+
+    nav a::before{
+      width: 0%;
+  height: 0%;
+  right: 0;
+  bottom: 0;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+ 
+    }
+
+    nav a:hover::before{
+      width: 50%;
+  height: 50%;
+  border-right: 3px solid rgb(57, 137, 43);
+  border-bottom: 3px solid rgb(57, 137, 43);  
+    }
+nav a:hover::after {
+  width: 50%;
+  height: 50%;
+  border-top: 3px solid rgb(57, 137, 43);
+  border-left: 3px solid rgb(57, 137, 43);
+}
+
+.login {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+}
+
+.login  button {
+    --c: rgb(14, 128, 57);
+    color: var(--c);
+    font-size: 16px;
+    border: 3px solid var(--c);
+    border-radius: 0.5em;
+    width: 6em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: verdana;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 2em;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: 0.5s;
+    background-color: #ffebcd;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.login  button span {
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.login button:hover {
+    color: rgb(174, 255, 178);
+}
+
+.login  button:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.login  button span:nth-child(1) {
+    --n: 1;
+}
+
+.login  button span:nth-child(2) {
+    --n: 2;
+}
+
+.login  button span:nth-child(3) {
+    --n: 3;
+}
+
+.login  button span:nth-child(4) {
+    --n: 4;
+}
+
+        .main {
+  background-color: #8AD6B7;
+  text-align: left;
+  padding: 50px 20px;
+  display: flex;
+  height: 634px;
+  background-attachment: fixed;
+ 
+}
+
+        .main2 {
+            background-color: #036348;
+            padding: 50px 20px;
+            height: 670px;
+            text-align: center;
+
+        }
+
+        .main3 {
+            background-color: #8AD6B7;
+            padding: 50px 20px;
+            height: 634px;
+            text-align: center;
+
+        }
+
+
+
+        .hero {
+            max-width: 50%;
+            margin: 0;
+            position: relative;
+            padding-left: 320px;
+            padding-top: 100px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            color: transparent;
+            margin: 0;
+            background: linear-gradient(
+        to right,
+        #229335 20%,
+        #1ebc53 40%,
+        #0d936d 60%,
+        #08a75f 80%,
+        #229335 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+
+        }
+        @keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+        .hero p {
+            font-size: 1.9em;
+            color: #036348;
+        }
+
+        .GreenBetterNatural p {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  vertical-align: top;
+}
+.GreenBetterNatural p .word {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+}
+.GreenBetterNatural p .word .letter {
+  transform-origin: center center 25px;
+}
+.GreenBetterNatural p .word .letter.out {
+  transform: rotateX(90deg);
+  transition: 0.2s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+.GreenBetterNatural p .word .letter.in {
+  transition: 0.3s ease;
+}
+.GreenBetterNatural p .word .letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.w-1 {
+  color: #2b8a1a;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 1.5em ;
+  padding-top: 10px;
+  padding-bottom:10px ;
+}
+
+.w-2 {
+  color: #02864f;
+  font-family: sans-serif;
+  font-weight: 600;
+  
+  font-size: 1.5em ;
+  padding-top: 10px;
+  padding-bottom:10px ;
+}
+
+.w-3 {
+  color: #20984a;
+  font-family: sans-serif;
+  font-weight: 600;
+  padding-top: 10px;
+  font-size: 1.5em ;
+ padding-bottom:10px ;
+}
+
+.WorldSpan{
+    max-width: 100%;
+            margin: 0;
+            position: relative;
+               color:#036348;
+    font-size: 2em;
+    font-weight: bold;
+}
+        
+       
+        .tree-image {
+            position: relative;
+            padding-left: 100px;
+            padding-top: 50px;
+            padding-right: 200px;
+            
+        }
+     
+
+
+        .tree-image img {
+            width: 400px;
+        }
+    
+        
+      
+        .tree-image::before,
+        .tree-image::after {
+            content: '';
+            position: absolute;
+            width: 230px;
+            height: 7px;
+            background-color: #036348;
+            transform: rotate(-45deg);
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, -0.5);
+            
+           
+        }
+
+       
+
+        .tree-image::before {
+            content: '';
+            position: absolute;
+            width: 230px;
+            height: 7px;
+            background-color: #036348;
+            transform: rotate(-45deg);
+            top: 60px;
+           
+            left: 60px;
+            
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            
+        }
+
+        .tree-image::after {
+            content: '';
+            position: absolute;
+            width: 230px;
+            height: 7px;
+            background-color: #036348;
+            transform: rotate(-45deg);
+            bottom: 150px;
+            
+            right: 130px;
+            
+            box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .smStep {
+            
+            display: flex;
+            justify-content: center;
+            
+           
+            text-align: center;
+            color: #ccffcc;
+        }
+
+        .smStepSmallspan {
+            font-size: 40px;
+            line-height: 0.8;
+            white-space: nowrap;
+            display: inline;
+            margin: 0 10px;
+            transition: font-size 0.5s ease, 0.5s ease;
+        }
+
+        .smStepSmallspan:hover {
+            font-size: 20px;
+            cursor: default;
+
+
+        }
+
+        .smstepGreenSpan {
+            font-size: 40px;
+            line-height: 0.8;
+            white-space: nowrap;
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .smstepGreenSpan:hover {
+            color: rgb(0, 255, 115);
+            cursor: default;
+            transition: color 0.5s ease, left 0.5s ease;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        .mySlides1 {
+            display: none;
+            padding-bottom: 30px;
+            transition: all 0.5s ease, 0.5s ease;
+        }
+
+
+        img {
+            vertical-align: middle;
+        }
+
+      
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            padding: 50px 20px;
+            margin: auto;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -30px;
+            color: #8AD6B7;
+            font-weight: bold;
+            font-size: 40px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+      
+        .next {
+            right: 0;
+            border-radius: 6px 6px 6px 6px;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 6px 6px 6px 6px;
+        }
+
+      
+        .prev:hover,
+        .next:hover {
+            background-color: #8AD6B7;
+            color: #036348;
+        }
+
+        .ourAim {
+      margin: auto;
+      padding: 50px;
+            justify-content: center;
+            text-align: center;
+            color: #3F6A36;
+            font-size: 80px;
+    }
+
+    .ourAim::after {
+      content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            display: block;
+            margin-top: 8px;
+            left: 50%;
+            transform: translateX(-50%); 
+            background: #3F6A36;
+            transition: width 0.3s ease, left 0.3s ease;
+    }
+
+    .ourAim:hover::after {
+      width: 30%;
+            right: 0;
+    }
+
+        .slide {
+          
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+            animation: both 0.5s ease;
+
+        }
+
+
+        .slide.active {
+            transform: translateX(0);
+        }
+
+        .slide:not(.active) {
+            transform: translateX(100%);
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        .carousel-indicators li {
+            list-style: none;
+            margin: 0 5px;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #036348;
+            border: 3px solid #ffebcd;
+
+
+        }
+
+        .carousel-indicators li.active {
+            background-color: #036348;
+            animation: indicator-animation 1s ease;
+          
+        }
+
+
+
+        .filled-circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            
+            height: 30px;
+           
+            border-radius: 50%;
+            background-color: #ffebcd;
+
+            
+        }
+        .slide-text {
+  position: absolute;
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out; 
+  left: 0; 
+  width: fit-content; 
+  white-space: nowrap;
+  z-index: 2;
+
+}
+
+.hidden {
+  opacity: 0; 
+}
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <header style="position: sticky;">
+        <div class="logo">
+            <img src="/static/trizz_logo.png"alt="Trizz Global Logo">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Home</a></li>
+                <li><a href="#" style="padding-left: 5px;padding-right: 5px;">About</a></li>
+                <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Team</a></li>
+                <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Gallery</a></li>
+            </ul>
+        </nav>
+        <div class="login">
+            <button>Login
+              <span></span><span></span><span></span><span></span>
+            </button>
+            
+          </div>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <h1 style="font-size: 80px;">TRIZZ<br>
+                GLOBAL</h1>
+            <p>A Global Initiative in making a <br> <div class="GreenBetterNatural" style="padding-bottom: 10px;">
+                <p style="position: relative;">
+                  <span class="word w-1">Greener</span>
+                  <span class="word w-2">Natural</span>
+                  <span class="word w-3">Better</span>
+                </p>
+                
+            </div>
+            <span class="WorldSpan"> World</span>
+              </p>
+        </section>
+        <div class="tree-image">
+            <img src="/static/trizz_logo.png"alt="Tree Image" >
+           
+        </div>
+
+    </main>
+
+    <main class="main2">
+        <h1 class="smStep" style="margin-top: 1em; color: #FFEC27;">A <span class="smStepSmallspan"> Small Step </span>
+            towards a <span class="smstepGreenSpan"> Greener World </span>
+        </h1>
+
+        <div class="slideshow-container">
+            <div class="mySlides1 active">
+                <img src="/static/group_photo.jpg" style="width:70%">
+            </div>
+
+            <div class="mySlides1">
+                <img src="/static/planting_image.jpg" style="width:70%">
+            </div>
+
+            <div class="mySlides1">
+                <img src="/static/planting_image2.jpg" style="width:70%">
+            </div>
+
+            <div class="mySlides1">
+                <img src="/static/watering_image.jpg" style="width:70%">
+            </div>
+            <ul class="carousel-indicators">
+                <li data-target=".mySlides1" data-slide-to="0" class="active"></li>
+                <li data-target=".mySlides1" data-slide-to="1"></li>
+                <li data-target=".mySlides1" data-slide-to="2"></li>
+                <li data-target=".mySlides1" data-slide-to="3"></li>
+                <div class="filled-circle"></div>
+            </ul>
+
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+        </div>
+
+        </div>
+
+
+    </main>
+    <main class="main3">
+        <div class="text-container">
+            <h1 class="ourAim" style="color:#036348; ">Our Aim</h1>
+
+            <p style="width: 50%; margin: auto;font-size: 24px;font-family: Leelawadee;color: #036348;">The aim of Trizz
+                Global is to foster environmental sustainability and social empowerment through grassroots initiatives,
+                community engagement, and collective action. We strive to inspire individuals to take ownership of their
+                local environment, plant trees for a greener future, and address pressing social issues such as women
+                empowerment and hunger eradication. By promoting a culture of responsibility and collaboration, we aim
+                to create a more resilient and equitable world for generations to come.</p>
+        </div>
+    </main>
+    <script> //slide script
+        const slideTexts = document.querySelectorAll('.slide-text');
+        let currentSlide = 0;
+      
+        function showNextSlide() {
+          slideTexts[currentSlide].classList.add('hidden');
+          currentSlide = (currentSlide + 1) % slideTexts.length;
+          slideTexts[currentSlide].classList.remove('hidden');
+        }
+      
+        showNextSlide(); 
+        setInterval(showNextSlide, 2000);
+      </script>
+      
+       
+    <script> //also slide script
+        let slideIndex = 1;
+
+        function plusSlides(n, no) {
+            showSlides(slideIndex += n, no);
+        }
+
+        function showSlides(n, no) {
+            let i;
+            let x = document.getElementsByClassName("mySlides1");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+
+            
+            const indicators = document.querySelectorAll('.carousel-indicators li');
+            const currentIndicator = indicators[slideIndex - 2]; 
+            const nextIndicator = indicators[slideIndex - 1]; 
+            const filledCircle = document.querySelector('.filled-circle');
+
+          
+            filledCircle.style.transition = "left 0.5s ease-in-out";
+            filledCircle.style.left = nextIndicator.offsetLeft + "px";
+
+         
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            indicators[slideIndex - 1].classList.add('active');
+
+          
+            console.log("Showing slide", slideIndex, "with animation applied.");
+        }
+
+
+
+       
+        showSlides(slideIndex);
+</script>
+
+<script> // script for GreenNturalBetterworld animation in start of the page
+        "use strict";
+
+let words = document.querySelectorAll(".word");
+words.forEach((word) => {
+  let letters = word.textContent.split("");
+  word.textContent = "";
+  letters.forEach((letter) => {
+    let span = document.createElement("span");
+    span.textContent = letter;
+    span.className = "letter";
+    word.append(span);
+  });
+});
+
+let currentWordIndex = 0;
+let maxWordIndex = words.length - 1;
+words[currentWordIndex].style.opacity = "1";
+
+let rotateText = () => {
+  let currentWord = words[currentWordIndex];
+  let nextWord =
+    currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex + 1];
+ 
+  Array.from(currentWord.children).forEach((letter, i) => {
+    setTimeout(() => {
+      letter.className = "letter out";
+    }, 1 + i * 80);
+  });
+ 
+  nextWord.style.opacity = "1";
+  Array.from(nextWord.children).forEach((letter, i) => {
+    letter.className = "letter behind";
+    setTimeout(() => {
+      letter.className = "letter in";
+    }, 200 + i * 80);
+  });
+  currentWordIndex =
+    currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
+};
+
+rotateText();
+setInterval(rotateText, 4000);
+    </script>
+
+
+    
+
+
+
+</body>
+
+</html>

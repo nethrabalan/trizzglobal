@@ -1,0 +1,322 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps team members</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffebcd;
+      padding: 10px 20px;
+      position: sticky;
+
+    }
+
+    header .logo {
+      flex: 1;
+    }
+
+    header nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: sticky;
+    }
+
+    header .login-button {
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+      gap: 20px;
+      position: sticky;
+    }
+
+    header nav ul {
+      list-style-type: none;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+      font-size: 20px;
+      position: sticky;
+    }
+
+
+
+    .logo img {
+      height: 70px;
+      transition: height ease 0.5s, ease 0.5s;
+    }
+
+    .logo img:hover {
+      height: 100px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+      font-size: 20px;
+      float: right;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4b8b3b;
+      font-weight: bold;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      display: block;
+      margin-top: 5px;
+      left: 0;
+      background: #4b8b3b;
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+      right: 0;
+    }
+
+    .login-button button {
+      background-color: #4b8b3b;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: 20px;
+    }
+
+    .login-button button:hover {
+      background-color: #3a6e2e;
+    }
+
+    body {
+      margin: 0;
+
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #036348;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .team-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .team-member {
+      text-align: center;
+      margin: 60px;
+      padding: 40px;
+      background-color: #0b4131;
+      border-radius: 10px;
+      box-shadow: 0 0px 6px rgba(46, 239, 184, 0.682);
+      border: 2px solid transparent;
+      transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+      width: 27%;
+      height: auto;
+    }
+
+    .team-member:hover {
+      transform: translateY(-10px);
+      border-color: #cdff06;
+    }
+
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .team-member h3 {
+      font-weight: 700;
+      margin: 0;
+      color: #71fab5;
+    }
+
+    .team-member .description {
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .fa {
+      font-size: 24px;
+      margin: 0 10px;
+      color: #ffffff;
+      transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+      text-decoration: none;
+    }
+
+    .team-member:hover .fa {
+      transform: scale(1.2);
+      color: #ddff00;
+    }
+  </style>
+</head>
+
+<body>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+
+  <header style="position: sticky;">
+    <div class="logo">
+      <img src="/static/trizz_logo" alt="Trizz Global Logo">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Home</a></li>
+        <li><a href="#" style="padding-left: 5px;padding-right: 5px;">About</a></li>
+        <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Team</a></li>
+        <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Gallery</a></li>
+      </ul>
+    </nav>
+    <div class="login-button">
+      <button style="color: rgb(111, 255, 0);">Login</button>
+    </div>
+  </header>
+
+  <h1 style="padding-left: 20px;padding-top: 10px;font-weight: 200;color: #ffffff;">Meet our <span
+      style="color: #71fab5;">"team name"</span> Team members:</h1>
+  <div class="team-section">
+    <div class="team-member">
+      <img src="/static/devops_members_pictures/raja_murugesan.jpeg" alt="Team Member 1">
+      <h3>Raja Murugesan (XII C)
+      </h3>
+      <p class="description"> Passionate programmer with expertise in Cybersecurity and Ethical Hacking, dedicated to the craft of computing.</p>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+    </div>
+    <div class="team-member">
+      <img src="/static/devops_members_pictures/tejaaswin.jpeg" alt="Team Member 2">
+      <h3> Tejashwin V (XII C)
+      </h3>
+      <p class="description"> 
+        
+        The driving force behind Trizz Global, a motivational leader, integral member of the JARVIS team, proficient video editor, and talented web developer.</p>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+    </div>
+  </div>
+  <div class="team-section">
+    <div class="team-member">
+      <img src="/static/devops_members_pictures/aryaansh.jpeg" alt="Team Member 1">
+      <h3>Aryaansh Soni (XII C)
+
+      </h3>
+      <p class="description"> Talented in video editing, holding the role of Computer Science Club Secretary, and
+        contributing to the JARVIS team.
+      </p>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+    </div>
+    <div class="team-member">
+      <img src="/static/devops_members_pictures/abishek.jpeg" alt="Team Member 2">
+      <h3> Abhishek Balaji (XII C)
+
+      </h3>
+      <p class="description">Co-Founder of Trizz, passionate about Computer Science and understanding the mechanics behind systems.</p>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+    </div>
+  </div>
+  <div class="team-section">
+    <div class="team-member">
+      <img src="/static/devops_members_pictures/akhilesh_jc.jpeg" alt="Team Member 1">
+      <h3>Akhilesh JC (XI D)
+
+      </h3>
+      <p class="description"> 
+      
+        AI Enthusiast proficient in server-side web programming and AI-based software solutions development, with a keen interest in digital marketing.</p>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+    </div>
+    <div class="team-member">
+      <img src="/static/devops_members_pictures/" alt="Team Member 2">
+      <h3>Shashank Ranganathan (XII D)
+
+      </h3>
+      <p class="description"> to be added</p>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+    </div>
+  </div>
+  <div class="team-section">
+    <div class="team-member">
+      <img src="/static/devops_members_pictures/" alt="Team Member 1">
+      <h3>
+        Adithya Krishna (XI A)
+
+      </h3>
+      <p class="description"> to be added</p>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+    </div>
+    <div class="team-member">
+      <img src="/static/devops_members_pictures/" alt="Team Member 2">
+      <h3> Inay Chetan Chauhan (XI D)
+
+      </h3>
+      <p class="description"> to be added</p>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+    </div>
+  </div>
+  <div class="team-section">
+    <div class="team-member">
+      <img src="/static/devops_members_pictures/srikant_jpeg" alt="Team Member 1">
+      <h3>
+        Srikanth Subramaniam (XII C)
+
+      </h3>
+      <p class="description"> to be added</p>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+    </div>
+    <div class="team-member">
+      <img src="/static/devops_members_pictures/" alt="Team Member 2">
+      <h3> Sraestha Sabarish (XI D)
+      </h3>
+      <p class="description"> to be added</p>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+    </div>
+  </div>
+  <div class="team-section">
+    <div class="team-member">
+      <img src="/static/devops_members_pictures/" alt="Team Member 1">
+      <h3>
+        Nethrabalan.P (XI E)
+
+      </h3>
+      <p class="description"> to be added</p>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+    </div>
+  </div>
+
+</body>
+
+</html>

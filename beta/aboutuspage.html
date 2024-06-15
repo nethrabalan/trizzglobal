@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trizz Global</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffebcd;
+            padding: 10px 20px;
+            position: sticky;
+           
+        }
+
+        header .logo {
+            flex: 1;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: sticky;
+        }
+
+        header .login-button {
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            gap: 20px;
+            position: sticky;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+            font-size: 20px;
+            position: sticky;
+        }
+
+
+
+        .logo img {
+            height: 70px;
+            transition: height ease 0.5s, ease 0.5s;
+        }
+
+        .logo img:hover {
+            height: 100px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+            font-size: 20px;
+            float: right;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4b8b3b;
+            font-weight: bold;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 5px;
+            left: 0;
+            background: #4b8b3b;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+            right: 0;
+        }
+
+        .login-button button {
+            background-color: #4b8b3b;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        .login-button button:hover {
+            background-color: #3a6e2e;
+        }
+        .main3 {
+            background-color: #8AD6B7;
+            padding: 50px 20px;
+            height: 634px;
+            text-align: center;
+
+        }
+
+        .ourAim {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            color: #3F6A36;
+            font-size: 80px;
+        }
+
+        text.container{
+            margin: 100px auto;
+            width: 75%;
+        }
+
+        .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.image-colorize {
+    filter: grayscale(100%); 
+    transition: filter 0.5s ease; 
+
+    
+}
+
+.image-colorize:hover {
+    filter: grayscale(0%); 
+ 
+}
+
+
+</style>
+
+<body>
+    <header style="position: sticky;">
+        <div class="logo">
+            <img src="/static/trizz_logo.png"alt="Trizz Global Logo">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Home</a></li>
+                <li><a href="#" style="padding-left: 5px;padding-right: 5px;">About</a></li>
+                <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Team</a></li>
+                <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Gallery</a></li>
+            </ul>
+        </nav>
+        <div class="login-button">
+            <button style="color: rgb(111, 255, 0);">Login</button>
+        </div>
+    </header>
+    <main class="main3">
+        <div class="text-container">
+            <h1 class="ourAim" style="color:#036348; ">About Us</h1>
+<div class="content-wrapper">         
+     <p style="width: 50%; margin-left: 100px;font-size: 24px;font-family: Leelawadee;color: #036348;text-align: left;">The aim of Trizz
+                Join the movement with Trizz Global and be a part of something truly transformative!
+                Together, let's plant the seeds of change and watch them blossom into a greener, more vibrant Chennai.
+                With our<br> <span style="color: #4b8b3b;font-size: 2.5rem;">"1 Man = 1 Tree"</span> <br>initiative, we aim to cultivate a community dedicated to making a difference, one leaf at a time.
+                Together, let's grow a greener, brighter future for all.</p>
+                <div class="image-container">
+                    <img src="/static/aboutus_sapling_img.png" class="image-colorize" style="padding-right: 180px;width: 300px; float: right;">
+                    <div class="sparkle"></div>
+                </div>
+     
+        
+      
+    </main>
+    
+
+
+    </script>
+</body>
+</html>

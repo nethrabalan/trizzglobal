@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>globalOutreach team members</title>
+    <link rel="stylesheet" href="styles.css">
+
+<style>
+     
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffebcd;
+            padding: 10px 20px;
+            position: sticky;
+           
+        }
+
+        header .logo {
+            flex: 1;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: sticky;
+        }
+
+        header .login-button {
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            gap: 20px;
+            position: sticky;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+            font-size: 20px;
+            position: sticky;
+        }
+
+
+
+        .logo img {
+            height: 70px;
+            transition: height ease 0.5s, ease 0.5s;
+        }
+
+        .logo img:hover {
+            height: 100px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+            font-size: 20px;
+            float: right;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4b8b3b;
+            font-weight: bold;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 5px;
+            left: 0;
+            background: #4b8b3b;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+            right: 0;
+        }
+
+        .login-button button {
+            background-color: #4b8b3b;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        .login-button button:hover {
+            background-color: #3a6e2e;
+        }
+
+  body {
+    margin: 0;
+    
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #036348;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.team-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team-member {
+  text-align: center;
+  margin: 60px;
+  padding: 40px;
+  background-color: #0b4131;
+  border-radius: 10px;
+  box-shadow: 0 0px 6px rgba(46, 239, 184, 0.682);
+  border: 2px solid transparent;
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out; 
+  width: 27%;
+  height: auto;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  border-color: #cdff06; 
+}
+
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  font-weight: 700;
+  margin: 0;
+  color:#71fab5;
+}
+
+.team-member .role {
+  color: #71fab5;
+  margin-bottom: 20px;
+}
+
+.fa {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #ffffff;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.team-member:hover .fa {
+  transform: scale(1.2);
+  color: #ddff00;
+}
+</style>
+</head>
+
+<body>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+
+<header style="position: sticky;">
+    <div class="logo">
+        <img src="/static/trizz_logo" alt="Trizz Global Logo">
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Home</a></li>
+            <li><a href="#" style="padding-left: 5px;padding-right: 5px;">About</a></li>
+            <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Team</a></li>
+            <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Gallery</a></li>
+        </ul>
+    </nav>
+    <div class="login-button">
+        <button style="color: rgb(111, 255, 0);">Login</button>
+    </div>
+</header>
+
+<h1 style="padding-left: 20px;padding-top: 10px;font-weight: 200;color: #ffffff;">Meet our <span style="color: #71fab5;">"team name"</span> Team members:</h1>
+<div class="team-section">
+  <div class="team-member">
+    <img src="C:\Users\Admin\Desktop\hhumanoids.png" alt="Team Member 1">
+    <h3>Some</h3>
+    <p class="role">Designer</p>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+  </div>
+  <div class="team-member">
+    <img src="C:\Users\Admin\Desktop\hhumanoids.png" alt="Team Member 2">
+    <h3>Random</h3>
+    <p class="role">Developer</p>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+  </div>
+  <div class="team-member">
+    <img src="C:\Users\Admin\Desktop\hhumanoids.png" alt="Team Member 3">
+    <h3>Person</h3>
+    <p class="role">Marketer</p>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+  </div>
+  <div class="team-member">
+    <img src="C:\Users\Admin\Desktop\hhumanoids.png" alt="Team Member 2">
+    <h3>Random</h3>
+    <p class="role">Developer</p>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+  </div>
+</div>
+
+</body>
+
+</html>
