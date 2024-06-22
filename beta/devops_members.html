@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    header {
+   header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: #ffebcd;
       padding: 10px 20px;
       position: sticky;
-
+    
     }
 
     header .logo {
@@ -67,42 +67,134 @@
     }
 
     nav a {
-      text-decoration: none;
+    
+ 
+  width:90%;
+  font-size: 25px;
+  font-family: Verdana;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms cubic-bezier(1, 1, 1, 1);
+  text-align: center;
+  padding:10px ;
+  margin-right: 20px;
+     text-decoration: none;
       color: #4b8b3b;
-      font-weight: bold;
+      font-weight: 200;
       position: relative;
     }
 
+    nav a::after,nav a::before {
+      content: "";
+  position: absolute;
+  display: block;
+  border: 0px solid transparent;
+  width: 0%;
+  height: 0%;
+  transition: all 0.5s ease;
+  border-spacing: 29px 29px;
+    }
+
     nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      display: block;
-      margin-top: 5px;
-      left: 0;
-      background: #4b8b3b;
-      transition: width 0.3s ease, left 0.3s ease;
+      width: 0%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-spacing: 29px 29px;
     }
 
-    nav a:hover::after {
-      width: 100%;
-      right: 0;
+    nav a::before{
+      width: 0%;
+  height: 0%;
+  right: 0;
+  bottom: 0;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+ 
     }
 
-    .login-button button {
-      background-color: #4b8b3b;
-      color: white;
-      border: none;
-      padding: 15px 25px;
-      cursor: pointer;
-      border-radius: 10px;
-      font-size: 20px;
+    nav a:hover::before{
+      width: 50%;
+  height: 50%;
+  border-right: 3px solid rgb(57, 137, 43);
+  border-bottom: 3px solid rgb(57, 137, 43);  
     }
+nav a:hover::after {
+  width: 50%;
+  height: 50%;
+  border-top: 3px solid rgb(57, 137, 43);
+  border-left: 3px solid rgb(57, 137, 43);
+}
 
-    .login-button button:hover {
-      background-color: #3a6e2e;
-    }
+.login {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+}
+
+.login  button {
+    --c: rgb(14, 128, 57);
+    color: var(--c);
+    font-size: 16px;
+    border: 3px solid var(--c);
+    border-radius: 0.5em;
+    width: 6em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: verdana;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 2em;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: 0.5s;
+    background-color: #ffebcd;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.login  button span {
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.login button:hover {
+    color: rgb(174, 255, 178);
+}
+
+.login  button:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.login  button span:nth-child(1) {
+    --n: 1;
+}
+
+.login  button span:nth-child(2) {
+    --n: 2;
+}
+
+.login  button span:nth-child(3) {
+    --n: 3;
+}
+
+.login  button span:nth-child(4) {
+    --n: 4;
+}
 
     body {
       margin: 0;
@@ -157,6 +249,7 @@
     .team-member .description {
       color: #ffffff;
       margin-bottom: 20px;
+      line-height: 1.5;
     }
 
     .fa {
@@ -179,32 +272,35 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
 
-  <header style="position: sticky;">
-    <div class="logo">
-      <img src="/static/trizz_logo" alt="Trizz Global Logo">
-    </div>
+   <header style="position: sticky;">
+        <div class="logo">
+            <img src="/static/trizz_logo.png"alt="Trizz Global Logo">
+        </div>
 
-    <nav>
-      <ul>
-        <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Home</a></li>
-        <li><a href="#" style="padding-left: 5px;padding-right: 5px;">About</a></li>
-        <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Team</a></li>
-        <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Gallery</a></li>
-      </ul>
-    </nav>
-    <div class="login-button">
-      <button style="color: rgb(111, 255, 0);">Login</button>
-    </div>
-  </header>
+        <nav>
+            <ul>
+                <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Home</a></li>
+                <li><a href="#" style="padding-left: 5px;padding-right: 5px;">About</a></li>
+                <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Team</a></li>
+                <li><a href="#" style="padding-left: 5px;padding-right: 5px;">Gallery</a></li>
+            </ul>
+        </nav>
+        <div class="login">
+            <button>Login
+              <span></span><span></span><span></span><span></span>
+            </button>
+            
+          </div>
+    </header>
 
   <h1 style="padding-left: 20px;padding-top: 10px;font-weight: 200;color: #ffffff;">Meet our <span
-      style="color: #71fab5;">"team name"</span> Team members:</h1>
+      style="color: #71fab5;">DevOps</span> Team members:</h1>
   <div class="team-section">
     <div class="team-member">
       <img src="/static/devops_members_pictures/raja_murugesan.jpeg" alt="Team Member 1">
       <h3>Raja Murugesan (XII C)
       </h3>
-      <p class="description"> Passionate programmer with expertise in Cybersecurity and Ethical Hacking, dedicated to the craft of computing.</p>
+      <p class="description"> Passionate programmer with expertise in Cybersecurity and Ethical Hacking, dedicated to the craft of computing. Has been instrumental in multiple projects</p>
       <a href="#" class="fa fa-google"></a>
       <a href="#" class="fa fa-linkedin"></a>
     </div>
@@ -243,75 +339,75 @@
   </div>
   <div class="team-section">
     <div class="team-member">
-      <img src="/static/devops_members_pictures/akhilesh_jc.jpeg" alt="Team Member 1">
+      <img src="/static/devops_members_pictures/akhilesh_jc.JPG" alt="Team Member 1">
       <h3>Akhilesh JC (XI D)
 
       </h3>
       <p class="description"> 
       
-        AI Enthusiast proficient in server-side web programming and AI-based software solutions development, with a keen interest in digital marketing.</p>
+        AI Enthusiast proficient in server-side web programming and AI-based software solutions development, with a keen interest in digital marketing. Has been instrumental in multiple projects</p>
       <a href="#" class="fa fa-google"></a>
       <a href="#" class="fa fa-linkedin"></a>
     </div>
     <div class="team-member">
-      <img src="/static/devops_members_pictures/" alt="Team Member 2">
+      <img src="/static/devops_members_pictures/shashank.jpg" alt="Team Member 2">
       <h3>Shashank Ranganathan (XII D)
 
       </h3>
-      <p class="description"> to be added</p>
+      <p class="description"> Talented Programmer and MUNner who uses his leadership skills and understands the social and economic elements for any project and strives to deliver the best results. Has been instrumental in multiple projects</p>
       <a href="#" class="fa fa-google"></a>
       <a href="#" class="fa fa-linkedin"></a>
     </div>
   </div>
   <div class="team-section">
     <div class="team-member">
-      <img src="/static/devops_members_pictures/" alt="Team Member 1">
+      <img src="/static/devops_members_pictures/aditya_krishna.JPG" alt="Team Member 1">
       <h3>
         Adithya Krishna (XI A)
 
       </h3>
-      <p class="description"> to be added</p>
+      <p class="description">Aspiring Frontend developer who has a great interest for designing</p>
       <a href="#" class="fa fa-google"></a>
       <a href="#" class="fa fa-linkedin"></a>
     </div>
     <div class="team-member">
-      <img src="/static/devops_members_pictures/" alt="Team Member 2">
+      <img src="/static/devops_members_pictures/inay_chetan.JPG" alt="Team Member 2">
       <h3> Inay Chetan Chauhan (XI D)
 
       </h3>
-      <p class="description"> to be added</p>
+      <p class="description"> Talented Frontend and Backend developer who has keen interest in latest trends in Tech.  Has been instrumental in multiple projects</p>
       <a href="#" class="fa fa-google"></a>
       <a href="#" class="fa fa-linkedin"></a>
     </div>
   </div>
   <div class="team-section">
     <div class="team-member">
-      <img src="/static/devops_members_pictures/srikant_jpeg" alt="Team Member 1">
+      <img src="/static/devops_members_pictures/srikant.jpeg" alt="Team Member 1">
       <h3>
         Srikanth Subramaniam (XII C)
 
       </h3>
-      <p class="description"> to be added</p>
+      <p class="description">Talented Web Developer with experience on multiple projects</p>
       <a href="#" class="fa fa-google"></a>
       <a href="#" class="fa fa-linkedin"></a>
     </div>
     <div class="team-member">
-      <img src="/static/devops_members_pictures/" alt="Team Member 2">
+      <img src="/static/devops_members_pictures/sreashta_sabarish.JPG" alt="Team Member 2">
       <h3> Sraestha Sabarish (XI D)
       </h3>
-      <p class="description"> to be added</p>
+      <p class="description"> Talented AI and Backend developer with Public Speaking skills. Has been instrumental in multiple projects</p>
       <a href="#" class="fa fa-google"></a>
       <a href="#" class="fa fa-linkedin"></a>
     </div>
   </div>
   <div class="team-section">
     <div class="team-member">
-      <img src="/static/devops_members_pictures/" alt="Team Member 1">
+      <img src="/static/devops_members_pictures/nethrabalan.JPG" alt="Team Member 1">
       <h3>
         Nethrabalan.P (XI E)
 
       </h3>
-      <p class="description"> to be added</p>
+      <p class="description">Aspiring Frontend Developer with a keen interest in learning new technologies and has a very humble personality</p>
       <a href="#" class="fa fa-google"></a>
       <a href="#" class="fa fa-linkedin"></a>
     </div>
